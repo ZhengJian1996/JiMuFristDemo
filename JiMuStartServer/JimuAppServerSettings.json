@@ -1,0 +1,36 @@
+{
+  //Nlog配置
+  "JimuNLogOptions": {
+    "UseInService": true,
+    "EnableConsoleLog": true,
+    "EnableFileLog": true,
+    "FileLogPath": "log",
+    "FileLogLevelMax": "Error",
+    "FileLogLevelMin": "Debug",
+    "ConsoleLogLevelMax": "Error",
+    "ConsoleLogLevelMin": "Debug"
+    //"Configuration":  "nlog.config"
+  },
+  //Consul配置
+  "ConsulOptions": {
+    "Ip": "127.0.0.1", //consul ip 启动consul的那台主机的ip
+    "Port": "8500", // consul port  consul默认端口
+    "ServiceGroups": "jimu.sample", //服务注册所属的组别
+    "ServiceInvokeIp": "127.0.0.1", //这个微服务的地址
+    "ServiceInvokePort": "8001" //这个微服务监听的端口
+  },
+  //这个微服务的配置
+  "TransportOptions": {
+    "Ip": "127.0.0.1", //当前服务宿主ip
+    "Port": 8001, //当前服务宿主端口
+    "Protocol": "Netty", //传输协议： Netty, Http
+    "ServiceInvokeIp": "127.0.0.1", //当前服务宿主的地址
+    "ServiceInvokePort": "8001"
+  },
+  //微服务启动时加载的组件配置
+  "ServiceOptions": {
+    "Path": "", //服务dll所在路径，默认当前目录
+    "LoadFilePattern": "JiMuStartService.dll" //需要加载的服务dll，支持统配符:*.dll,*.txt  写我们刚才创建的类库的生成dll的名称
+  }
+
+}

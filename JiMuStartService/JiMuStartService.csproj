@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>JiMuStartService</AssemblyName>
+    <RootNamespace>JiMuStartService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jimu" Version="1.4.1" />
+  </ItemGroup>
+
+</Project>
